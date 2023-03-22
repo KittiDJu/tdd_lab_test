@@ -8,3 +8,8 @@ def get_name(name: str):
     global names = name
     return {"hello": names}
 handler = Mangum(app)
+
+@app.post("/callname")
+def post_name():
+    return {"hello": names}
+handler = Mangum(app)
