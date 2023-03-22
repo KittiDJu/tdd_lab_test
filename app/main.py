@@ -3,7 +3,7 @@ from mangum import Mangum
 
 app = FastAPI()
 
-@app.get("/{name}")
+@app.post("/{name}")
 def read_root(name: str):
     return {"hello": name}
 handler = Mangum(app)
