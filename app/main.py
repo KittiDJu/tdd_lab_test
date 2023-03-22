@@ -7,8 +7,3 @@ app = FastAPI()
 def get_name(name: str):
     return {"hello": name}
 handler = Mangum(app)
-
-@app.post("/callname")
-def post_name(name: str):
-    return {"hello": name}
-handler = Mangum(app)
