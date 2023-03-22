@@ -6,4 +6,4 @@ client = TestClient(app)
 def test_read_main():
     response = client.post("/{name}")
     assert response.status_code == 200
-    assert response.json() == {"hello": {name}}
+    assert response.json() == {"hello": response}
