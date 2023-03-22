@@ -5,5 +5,6 @@ app = FastAPI()
 
 @app.get("/callname/{name}")
 def get_name(name: str):
-    return {"hello": name}
+    global names = name
+    return {"hello": names}
 handler = Mangum(app)
