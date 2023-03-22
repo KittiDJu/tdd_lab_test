@@ -9,6 +9,7 @@ def test_get_name():
     assert response.json() == {"hello": "{name}"}
     
 def test_post_name():
+    name = test_get_name()
     response = client.post("/callname")
     assert response.status_code == 200
     assert response.json() == {"hello": "{name}"}
